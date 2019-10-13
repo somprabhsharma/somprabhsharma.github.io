@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	background: #fff;
 	z-index:3;
-	-webkit-transform: translate3d(0,0,0);	
+	-webkit-transform: translate3d(0,0,0);
 }
 #intro .container {
 	display: flex;
@@ -245,7 +245,6 @@ h1, h2, h3, h4, h5, h6 {
 	height: 70px;
 	z-index: 10;
 	background-color: #2c313e !important;
-	/*background:url(../images/bg-new.jpg) !important;*/
 }
 .nav-border{
 	position:absolute;
@@ -275,6 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .link-holder ul {
 	max-width: fit-content;
+    max-width: -moz-max-content;
 	float: right;
 	padding: 10px;
 	margin-right: 40px;
@@ -481,6 +481,7 @@ h1, h2, h3, h4, h5, h6 {
 	bottom: 0;
 	right: 40px;
 	color: #50AFCE;
+    z-index: 2;
 }
 
 .email-floater-container {
@@ -511,6 +512,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
 	padding: 10px;
 	color: #E6F1FF;
+}
+
+.email-floater-item:hover {
+    color: #50AFC0;
 }
 
 /* sidebar */
@@ -735,48 +740,25 @@ h1, h2, h3, h4, h5, h6 {
 	color: #50AFC0;
 }
 
-/* skills */
-pre {
-	font: 18px "Consolas", "Liberation Mono", "Menlo", "Courier", monospace;
-	font-family: "Menlo","Monaco","Andale Mono","lucida console","Courier New",monospace;
-	line-height: 1.50;
-	word-wrap: normal;
-	text-align: left;
-}
-
-.hljs {
-	color: #a9b7c6;
-	font-weight: 700;
-}
-
-.hljs-keyword {
-	color: #cc7732;
-	font-weight: 700;
-}
-
-.hljs-string {
-	color: #6a8759;
-	font-weight: 700;
-}
-
-.parallax-skills {
-	background:url(../images/workspace.png);
-	background-size: cover;
-	background-position: center  ;
-	background-attachment:fixed;
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:-12;
-}
-
 /* resume */
 #resume{
 	position:relative;
 	z-index:4;
 	padding:0;
+}
+#resume p {
+	font-family: ProductSans, 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.5;
+}
+#resume h4 {
+	font-family: ProductSans, 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-weight: normal;
+	line-height: 1.5;
+	text-transform: unset;
 }
 .background-color{
 	float:left;
@@ -852,10 +834,11 @@ pre {
 	border-radius:100%;
 	position:relative;
 	border-bottom:4px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.resume-date h4 {
-	margin-top:40px;
-}
+
 .resume-date span {
 	margin-top:6px;
 	font-size:0.8em;
@@ -1447,7 +1430,7 @@ pre {
 		margin-left:0;
 	}
 	.nav-holder{
-		position:fixed;
+		position:absolute;
 		width:100%;
 		height: 70px;
 		z-index:100;
@@ -1491,7 +1474,7 @@ pre {
 		top: 70px;
 		left: 0;
 		width: 100%;
-		height: fit-content;
+        height: 172px;
 		box-shadow: 0 5px 5px -5px #000;
 	}
 	.link-holder-inner {
@@ -1539,9 +1522,11 @@ pre {
 	.social-profiles {
 		left: 10px;
 		z-index: 100;
+		position: absolute;;
 	}
 	.email-floater {
 		right: 10px;
+		position: absolute;
 	}
 	#intro .container {
 		justify-content: center;

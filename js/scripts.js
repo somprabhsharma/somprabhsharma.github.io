@@ -1,16 +1,7 @@
 function initSom() {
-	// animate intro title text
-	$('h1.animtext').textillate({ in: { effect: 'flipInX',delayScale: 2  } });
-	$('h1.animtext').fitText(1.8,{minFontSize:'20px',maxFontSize:'72px'});
-
-	// animate intro subtitle text
-	$('h3.animtext').textillate({ in: { effect: 'flipInX',delayScale: 1.8  } });
-
-
 	$('.intro-init').textillate({ in: { effect: 'flipInX',delayScale: 5  } });
 	$('.intro-title').textillate({ initialDelay: 700, in: { effect: 'flipInX',delayScale: 3  } });
 	$('.intro-subtitle').textillate({ initialDelay: 1800, in: { effect: 'flipInX',delayScale: 1  } });
-	// $('.intro-description').textillate({ in: { effect: 'fadeIn',delayScale: 1.8  } });
 
 	// scroll animation for each section
 	$('.animaper').appear();
@@ -97,11 +88,7 @@ function initSom() {
 	});
 	
 	$('.nav-button').click(function(){
-		// $('.link-holder').slideToggle(50, function() {
-		// 	if ($(this).is(':visible'))
-		// 		$(this).css('display','flex');
-		// });
-		$('.link-holder').slideToggle(500);
+		$('.link-holder').slideToggle('slow');
 	});
 
 	window.addEventListener('wheel', { passive: false });
@@ -161,7 +148,7 @@ function initSom() {
 	// mix all projects
 	$('#folio_container').mixitup({
 		targetSelector: '.box',
-		effects: ['fade','rotateX'],
+		effects: ['fade'],
 		easing: 'snap',
 		transitionSpeed:600,
 		layoutMode: 'grid',
